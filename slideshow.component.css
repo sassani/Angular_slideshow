@@ -1,0 +1,19 @@
+  
+#base {
+    position: relative;
+    padding: 0px;
+    width: 100%;
+    z-index: 0;
+}
+
+.sliderArrows{
+    display:flex;
+    position: absolute;
+    z-index: 201;
+}
+
+.filler{
+    padding: 0px;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+}

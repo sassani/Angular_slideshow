@@ -1,0 +1,28 @@
+<div 
+class="sliderArrows"
+*ngIf="showArrows"
+[ngStyle]="fillerStyles">
+    <a 
+    class="left carousel-control"  
+    (click)="prev()">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a 
+    class="right carousel-control"  
+    (click)="next()">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+</div>
+
+<div 
+    id="base" 
+    *ngFor="let slide of slides" 
+    [@showContent]="slide.state">
+        <printslide [meta]="slide" (imageSize)=setFillerStyle($event)></printslide>
+</div>
+
+
+<div 
+class="filler" 
+[ngStyle]="fillerStyles">
+</div>
